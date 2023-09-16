@@ -4,7 +4,7 @@ require('./db/config');
 const User = require('./db/User');
 const app = express();
 const Product = require('./db/Product')
-
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
@@ -67,4 +67,4 @@ app.delete('/product/:_id',async (req,resp)=>{
 })
 
 
-app.listen(5000)
+app.listen(PORT)
